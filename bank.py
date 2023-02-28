@@ -31,5 +31,3 @@ def element_pop(p):
         return 0
     else:
         return -1
-
-main()
