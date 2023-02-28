@@ -34,8 +34,13 @@ def check_hello(collect):
     elif(collect=='o'):
         r+=1
         element_pop()
-    else
+    else:
         element_pop()
-
+    if(r==5):
+        return 1
+    elif(r<5):
+        return 0
+    else:
+        return -1
 
 main()
