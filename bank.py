@@ -27,7 +27,7 @@ def element_pop(p):
                r=r+1
           else:
                break
-
+    print(r)
     if(r==5):
         return 1
     elif(r<5):
