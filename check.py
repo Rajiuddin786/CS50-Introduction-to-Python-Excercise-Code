@@ -3,7 +3,7 @@ def element_pop(p):
     length=len(p)#Finding the length of the string
     #string to list
     for i in p:
-          list_hello[r=r+1]=i
+          list_hello[10]=i
 
     """if(list_hello[0]=='H'):
             r+=1
