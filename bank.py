@@ -9,19 +9,22 @@ def main():
         print("100$")
 
 def poping(p):
-    r=0
+    r=1
     length=len(p)#Finding the length of the string
     list_hello=list(p)
     for i in range(length):
         element=[list_hello.pop(i)]
+        if(element[i]==H):
+            r=0
+        elif(element[i]!=e):
+            r=0
+        elif(element[i]!=l):
+        elif(element[i]!=l):
+        elif(element[i]!=o):
 
-    while True:
-        if(element[r]==H):
-            if(element[r+1]!=e):
-                if(element[r+2]!=l):
-                    if(element[r+3]!=l):
-                        if(element[r+4]!=o):
-                            return 0
+
+              return 0
         else:
             return 1
 main()
+
