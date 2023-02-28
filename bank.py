@@ -29,5 +29,6 @@ def check_hello(collect):
         r+=1
     elif(collect=='o'):
         r+=1
-    elif(collect==' '):
-        
+
+
+
