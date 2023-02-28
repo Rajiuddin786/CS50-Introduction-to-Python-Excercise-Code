@@ -21,6 +21,7 @@ def check_hello(collect):
     r=0
     if(collect=='H'):
         r+=1
+        
     elif(collect=='e'):
         r+=1
     elif(collect=='l'):
