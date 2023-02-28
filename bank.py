@@ -1,42 +1,49 @@
 def main():
-    my_input=input("Greeting: ").strip().title()
-    check=element_pop(my_input)
-    if(check==1):
-        print("100$")
-    elif(check==0):
-        print("20$")
+    hello = input("Greeting: ").strip().title()
+    j = check(hello)
+    if j == 1:
+        print('0$')
+    elif j == 0:
+        print('20$')
     else:
-        print("0$")
+        print('100$')
 
-def element_pop(p):
-    r=0
-    h=0
-    list_hello=[]
-    for i in p:
-         list_hello.append(i)
 
-    for i in range(len(list_hello)):
-        if(list_hello[0]=='H'):
-            h=1
-        if(list_hello[0]!='H'):
-            r=r+1
-        elif(list_hello[1]!='e'):
-            r=r+1
-        elif(list_hello[2]!='l'):
-            r==r+1
-        elif(list_hello[3]!='l'):
-            r=r+1
-        elif(list_hello[4]!='o'):
-            r=r+1
-        else:
+def check(hello):
+    my_list = list(hello)
+    lenght = len(my_list)
+    r = 0
+    h = 0
+    for i in range(lenght - 1):
+        if i == 0:
+            if my_list[0] == 'H':
+                r += 1
+                h += 1
+        elif i == 1:
+            if my_list[1] == 'e':
+                r += 1
+                h += 1
+        elif i == 2:
+            if my_list[2] == 'l':
+                r += 1
+                h += 1
+        elif i == 3:
+            if my_list[3] == 'l':
+                r += 1
+                h += 1
+        elif i == 4:
+            if my_list[4] == 'o':
+                r += 1
+                h += 1
+        if i > 4:
             break
-    if(r==5):
-        return 1
-    if(r<5 and h==1):
-        return 0
-    if(r==0 and h==0):
-        return -1
 
+    if r == 5:
+        return 1
+    if r != 5 and h==1:
+        return 0
+    else:
+        return -1
 
 
 main()
