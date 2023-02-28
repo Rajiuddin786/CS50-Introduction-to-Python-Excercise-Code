@@ -7,13 +7,13 @@ def main():
         print("20$")
     else:
         print("100$")
-
+main()
 def element_pop(p):
     r=0
     length=len(p)#Finding the length of the string
     list_hello=list(p)#string to list
     for i in range(length-1):
-        element=[list_hello.pop(i)]
+        element=list_hello.pop(i)
         if(element[0]==H):
             r+=1
         elif(element[1]==e):
