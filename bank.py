@@ -1,12 +1,12 @@
 def main():
     h=input("Greeting: ").strip().title()
-    
+    check=pop()
     if(h=='Hello'):
         print("0$")
-    elif()
-
-
-
+    elif(check==0):
+        print("20$")
+    else:
+        print("100$")
 
 def pop(p):
     r=0
