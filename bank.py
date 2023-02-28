@@ -10,9 +10,10 @@ def main():
 
 def poping(p):
     r=0
-    length=len(p)
+    length=len(p)#Finding the length of the string
+    list_hello=list(p)
     for i in range(length):
-        element=[p.pop(i)]
+        element=[list_hello.pop(i)]
 
     while True:
         if(element[r]==H):
