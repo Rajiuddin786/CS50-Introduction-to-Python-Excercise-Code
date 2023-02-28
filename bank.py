@@ -14,26 +14,20 @@ def element_pop(p):
     list_hello=list(p)#string to list
     for i in range(length-1):
         element=list_hello.pop(i)
-        if(element[0]=='H'):
-            r+=1
-        elif(element[1]=='e'):
-            r+=1
-        elif(element[2]=='l'):
-            r+=1
-        elif(element[3]=='l'):
-            r+=1
-        elif(element[4]=='o'):
-            r+=1
-
-    if(r==5):
-        return 1
-    elif(r<5):
-        return 0
-    else:
-        return -1
+        check_hello(element)
 
 
-
-
-
-main()
+def check_hello(collect):
+    r=0
+    if(collect=='H'):
+        r+=1
+    elif(collect=='e'):
+        r+=1
+    elif(collect=='l'):
+        r+=1
+    elif(collect=='l'):
+        r+=1
+    elif(collect=='o'):
+        r+=1
+    elif(collect==' '):
+        
