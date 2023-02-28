@@ -10,7 +10,7 @@ def main():
 
 def poping(p):
     r=0
-    length=p.len()
+    length=len(p)
     for i in range(length):
         element=[p.pop(i)]
 
