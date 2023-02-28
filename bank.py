@@ -15,19 +15,18 @@ def element_pop(p):
          list_hello.append(i)
 
     for i in range(len(list_hello)):
-          if(list_hello[0]=='H'):
+          if(list_hello[0]!='H'):
                r=r+1
-          elif(list_hello[1]=='e'):
+          elif(list_hello[1]!='e'):
                r=r+1
-          elif(list_hello[2]=='l'):
+          elif(list_hello[2]!='l'):
                r==r+1
-          elif(list_hello[3]=='l'):
+          elif(list_hello[3]!='l'):
                r=r+1
-          elif(list_hello[4]=='o'):
+          elif(list_hello[4]!='o'):
                r=r+1
-          else:
+          els
                break
-
     if(r==5):
         return 1
     elif(r<5):
