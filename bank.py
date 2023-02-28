@@ -1,7 +1,7 @@
 def main():
     h=input("Greeting: ").strip().title()
     check=poping(h)
-    if(h=='Hello'):
+    if(check==1):
         print("0$")
     elif(check==0):
         print("20$")
@@ -12,19 +12,24 @@ def poping(p):
     r=0
     length=len(p)#Finding the length of the string
     list_hello=list(p)
-    for i in range(length):
+    for i in range(length-1):
         element=[list_hello.pop(i)]
-        if(element[i]==H):
+        if(element[0]==H):
             r+=1
-        elif(element[i]!=e):
+        elif(element[1]==e):
             r+=1
-        elif(element[i]!=l):
+        elif(element[2]==l):
             r+=1
-        elif(element[i]!=l):
+        elif(element[3]==l):
             r+=1
-        elif(element[i]!=o):
+        elif(element[4]==o):
               r+=1
-        else:
-            return 1
-main()
 
+    if(r==5):
+        return 1
+    elif(r<5):
+        return 0
+    else:
+        return -1
+
+main()
