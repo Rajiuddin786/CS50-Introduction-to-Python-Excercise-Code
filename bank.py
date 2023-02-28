@@ -1,6 +1,6 @@
 def main():
     my_input=input("Greeting: ").strip().title()
-    check=poping(my_input)
+    check=element_pop(my_input)
     if(check==1):
         print("0$")
     elif(check==0):
@@ -8,7 +8,7 @@ def main():
     else:
         print("100$")
 
-def poping(p):
+def element_pop(p):
     r=0
     length=len(p)#Finding the length of the string
     list_hello=list(p)#string to list
