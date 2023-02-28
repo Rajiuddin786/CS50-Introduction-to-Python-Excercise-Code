@@ -4,6 +4,8 @@ int main()
     int a,b,c,s;
     scanf("%d %d",&a,&b);
     c=a>b;
-    if()
-
+    if(c)
+    printf("A is greater than B");
+    else
+    printf("B is greater than A");
 }
