@@ -23,7 +23,7 @@ def poping(p):
         elif(element[3]==l):
             r+=1
         elif(element[4]==o):
-              r+=1
+            r+=1
 
     if(r==5):
         return 1
