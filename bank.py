@@ -7,22 +7,22 @@ def main():
         print("20$")
     else:
         print("100$")
-main()
+
 def element_pop(p):
     r=0
     length=len(p)#Finding the length of the string
     list_hello=list(p)#string to list
     for i in range(length-1):
         element=list_hello.pop(i)
-        if(element[0]==H):
+        if(element[0]=='H'):
             r+=1
-        elif(element[1]==e):
+        elif(element[1]=='e'):
             r+=1
-        elif(element[2]==l):
+        elif(element[2]=='l'):
             r+=1
-        elif(element[3]==l):
+        elif(element[3]=='l'):
             r+=1
-        elif(element[4]==o):
+        elif(element[4]=='o'):
             r+=1
 
     if(r==5):
@@ -31,3 +31,9 @@ def element_pop(p):
         return 0
     else:
         return -1
+
+
+
+
+
+main()
