@@ -1,6 +1,6 @@
 def main():
     h=input("Greeting: ").strip().title()
-    check=pop(h)
+    check=poping(h)
     if(h=='Hello'):
         print("0$")
     elif(check==0):
@@ -8,7 +8,7 @@ def main():
     else:
         print("100$")
 
-def pop(p):
+def poping(p):
     r=0
     length=p.len()
     for i in range(length):
