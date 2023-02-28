@@ -1,6 +1,6 @@
 def main():
     h=input("Greeting: ").strip().title()
-    check=pop()
+    check=pop(h)
     if(h=='Hello'):
         print("0$")
     elif(check==0):
