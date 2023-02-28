@@ -11,18 +11,19 @@ def main():
 def element_pop(p):
     r=0
     length=len(p)#Finding the length of the string
-    list_hello=list(p)#string to list
-    for i in range(length-1):
-        element[i]=list_hello.pop(i)
-    if(element[0]=='H'):
+    #string to list
+    for i in p:
+          list_hello=i
+
+    if(list_hello[0]=='H'):
             r+=1
-    elif(element[1]=='e'):
+    elif(list_hello[1]=='e'):
               r+=1
-    elif(element[2]=='l'):
+    elif(list_hello[2]=='l'):
               r+=1
-    elif(element[3]=='l'):
+    elif(list_hello[3]=='l'):
              r+=1
-    elif(element[4]=='o'):
+    elif(list_hello[4]=='o'):
               r+=1
 
     if(r==5):
