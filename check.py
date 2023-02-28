@@ -1,1 +1,3 @@
-h=input().strip().title()
+h=input()
+o=h.strip().title()
+print(o)
