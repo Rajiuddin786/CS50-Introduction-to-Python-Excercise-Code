@@ -26,7 +26,7 @@ def element_pop(p):
          elif(list_hello[4]=='o'):
               r+=1
     for i in range(len(list_hello)):
-        p
+        print(list_hello[i])
     if(r==5):
         return 1
     elif(r<5):
