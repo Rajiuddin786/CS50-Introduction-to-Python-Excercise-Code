@@ -13,7 +13,7 @@ def element_pop(p):
     length=len(p)#Finding the length of the string
     list_hello=list(p)#string to list
     for i in range(length-1):
-        element[l]=list_hello.pop(i)
+        element[i]=list_hello.pop(i)
     if(element[0]=='H'):
             r+=1
     elif(element[1]=='e'):
