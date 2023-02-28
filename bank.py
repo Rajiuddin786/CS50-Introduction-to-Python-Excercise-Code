@@ -11,8 +11,6 @@ def main():
 def element_pop(p):
     r=0
     list_hello=[]
-    length=len(p)#Finding the length of the string
-    #string to list
     for i in p:
          list_hello.append(i)
 
@@ -34,6 +32,7 @@ def element_pop(p):
         return 0
     else:
         return -1
+
 
 
 main()
