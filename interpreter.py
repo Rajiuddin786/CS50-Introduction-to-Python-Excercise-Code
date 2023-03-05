@@ -7,18 +7,18 @@ for i in exp:
         break
 
 for j in exp:
-    if j == '+' or j == '-' or j == '*' or j == '/' or j == '%' or j==' ':
+    if j == '+' or j == '-' or j == '*' or j == '/' or j == '%' or j == ' ':
         continue
     else:
         if s == '+':
             y = y + float(j)
         elif s == '-':
             if y == 0:
-                y=y+float(j)
+                y = y + float(j)
             else:
-                y=y-float(j)
+                y = y - float(j)
         elif s == '*':
-            if(y==0)
+            if y == 0:
                 y = 1
             y = y * float(j)
         elif s == '/':
