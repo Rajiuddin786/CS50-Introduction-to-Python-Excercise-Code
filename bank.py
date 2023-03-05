@@ -2,11 +2,11 @@ def main():
     hello = input("Greeting: ").strip().title()
     j = check(hello)
     if j == 1:
-        print('0$')
+        print('$0', end='')
     elif j == 0:
-        print('20$')
-    else:
-        print('100$')
+        print('$20', end='')
+    elif j == -1:
+        print('$100', end='')
 
 
 def check(hello):
@@ -14,7 +14,7 @@ def check(hello):
     lenght = len(my_list)
     r = 0
     h = 0
-    for i in range(lenght - 1):
+    for i in range(lenght):
         if i == 0:
             if my_list[0] == 'H':
                 r += 1
@@ -35,9 +35,8 @@ def check(hello):
             if my_list[4] == 'o':
                 r += 1
                 h += 1
-        if i > 4:
+        if i > 5:
             break
-
     if r == 5:
         return 1
     if r != 5 and h==1:
