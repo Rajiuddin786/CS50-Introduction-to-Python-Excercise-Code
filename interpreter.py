@@ -7,7 +7,7 @@ for i in exp:
         break
 
 for j in exp:
-    if j == '+' or j == '-' or j == '*' or j == '/' or j == '%':
+    if j == '+' or j == '-' or j == '*' or j == '/' or j == '%' or j==' ':
         continue
     else:
         if s == '+':
