@@ -18,7 +18,8 @@ for j in exp:
             else:
                 y=y-float(j)
         elif s == '*':
-            y = 1
+            if(y==0)
+                y = 1
             y = y * float(j)
         elif s == '/':
             if y == 0:
