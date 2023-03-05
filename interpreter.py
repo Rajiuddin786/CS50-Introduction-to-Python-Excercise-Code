@@ -1,6 +1,8 @@
 exp = input('Expression: ').strip()
 y = 0
 s = ''
+x = 0
+l = 0
 for i in exp:
     if i == '+' or i == '-' or i == '*' or i == '/' or i == '%':
         s = i
@@ -24,16 +26,35 @@ for j in exp:
         elif s == '/':
             if y == 0:
                 y = 1
+                l = 1
                 y = y * float(j)
                 continue
-            y = y / float(j)
+            if j == '0':
+                if x == 0:
+                    y = y * 10
+                    x = 1
+                    continue
+                else:
+                    l = l * 10
+
+            y = y / l
+            l = l * float(j)
 
         elif s == '%':
             if y == 0:
                 y = 1
                 y = y * float(j)
                 continue
+            if j == '0':
+                if x == 0:
+                    y = y * 10
+                    x = 1
+                    continue
+                else:
+                    l = l * 10
+
             y = y % float(j)
+            l = l * float(j)
         else:
             print('Invalid Expression')
             break
