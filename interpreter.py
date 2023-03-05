@@ -13,7 +13,10 @@ for j in exp:
         if s == '+':
             y = y + float(j)
         elif s == '-':
-            y = y - float(j)
+            if y == 0:
+                y=y+float(j)
+            else:
+                y=y-float(j)
         elif s == '*':
             y = 1
             y = y * float(j)
