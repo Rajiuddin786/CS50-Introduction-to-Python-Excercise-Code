@@ -9,4 +9,12 @@ for k in name:
         v = p + '_' + h.lower() + m
         s = v
 
-print('snake_case: ',v)
+for o in name:
+    if o.islower():
+        print(name,end='')
+        break
+    else:
+        print('snake_case: ',v)
+        break
+    
+
