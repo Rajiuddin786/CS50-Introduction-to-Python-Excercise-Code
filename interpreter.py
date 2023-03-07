@@ -2,7 +2,8 @@ exp = input('Expression: ').strip()
 y = 0
 s = ''
 x = 0
-l = 0
+t = 0
+u = 0
 for i in exp:
     if i == '+' or i == '-' or i == '*' or i == '/' or i == '%':
         s = i
@@ -26,7 +27,7 @@ for j in exp:
         elif s == '/':
             if y == 0:
                 y = 1
-                l = 1
+                t = 1
                 y = y * float(j)
                 continue
             if j == '0':
@@ -35,10 +36,16 @@ for j in exp:
                     x = 1
                     continue
                 else:
-                    l = l * 10
+                    t = t * 10
+                    y = y / t
+                    t = t * float(j)
+                    u = 1
 
-            y = y / l
-            l = l * float(j)
+            if u == 0:
+                t = t * float(j)
+                y = y / t
+
+
 
         elif s == '%':
             if y == 0:
@@ -51,10 +58,10 @@ for j in exp:
                     x = 1
                     continue
                 else:
-                    l = l * 10
+                    t = t * 10
 
             y = y % float(j)
-            l = l * float(j)
+            t = t * float(j)
         else:
             print('Invalid Expression')
             break
