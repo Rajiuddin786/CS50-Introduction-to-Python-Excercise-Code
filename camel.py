@@ -3,6 +3,7 @@ h = ''
 s = name
 v = ''
 c = 0
+leng = len(name)
 for k in name:
     if k.isupper():
         h = k
@@ -10,9 +11,9 @@ for k in name:
         v = p + '_' + h.lower() + m
         s = v
     else:
-        c = 1
+        c += 1
 
-if c == 1:
+if c == leng:
     print(name,end='')
 else:
     print('snake_case: ',v)
