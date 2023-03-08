@@ -6,11 +6,11 @@ def main():
         rr = check(input_amount, rr1)
         if rr != 1:
             if rr > 0:
-                print('Due Amount:', rr)
+                print('Amount Due:', rr)
                 rr1 = rr
             if rr <= 0:
                 rr2 = rr*(-1)
-                print('Changed Owned:', rr2)
+                print('Change Owned:', rr2)
                 break
         else:
             print('Due Amount:', rr1)
