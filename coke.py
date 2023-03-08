@@ -10,10 +10,10 @@ def main():
                 rr1 = rr
             if rr <= 0:
                 rr2 = rr*(-1)
-                print('Change Owned:', rr2)
+                print('Change Owed:', rr2)
                 break
         else:
-            print('Due Amount:', rr1)
+            print('Amount Due:', rr1)
             continue
 
 
