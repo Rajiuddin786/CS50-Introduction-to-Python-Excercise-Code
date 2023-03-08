@@ -18,7 +18,7 @@ def main():
 
 
 def check(amo, r):
-    if amo == 25 or amo == 20 or amo == 5:
+    if amo == 25 or amo == 20 or amo == 5 or amo == 10:
         while True:
             o = r - amo
             return o
