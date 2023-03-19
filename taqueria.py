@@ -12,11 +12,14 @@ def main():
     total = 0
     while True:
         food = input("Item: ").title()
+        h = ''
         for i in food_menu:
             if food == i:
                 total = total + food_menu[i]
                 print('Total:', total)
-        if food == '':
+                h = i
+                break
+        if food == '' or h == '':
             break
 
 
