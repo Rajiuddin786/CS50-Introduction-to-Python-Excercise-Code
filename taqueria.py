@@ -13,6 +13,8 @@ total = 0
 while True:
     food = input("Item: ").title()
     h = ''
+    if food == 'EOF':
+        break
     for i in food_menu:
         if food == i:
             total = total + food_menu[i]
