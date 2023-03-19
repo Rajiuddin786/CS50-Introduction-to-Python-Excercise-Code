@@ -26,7 +26,7 @@ def error_hand(f):
         for i in f:
             if food == i:
                 total = total + f[i]
-                print(f"Total: ${total}")
+                print(f"${total}")
                 break
 
     return food
