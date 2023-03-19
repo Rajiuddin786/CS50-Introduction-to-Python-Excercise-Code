@@ -9,26 +9,26 @@ def main():
         "Super Quesadilla": 9.50,
         "Taco": 3.00,
         "Tortilla Salad": 8.00}
-    while True:
-        try:
-            fo = error_hand(food_menu)
-        except EOFError:
-            exit()
+
+    try:
+        fo = error_hand(food_menu)
+
+    except EOFError:
+        pass
 
 
 def error_hand(f):
     total = 0
     while True:
         food = input("Item: ").title()
-        h = ''
+        if food == "":
+            break
         for i in f:
             if food == i:
                 total = total + f[i]
-                print('Total: $'+ total)
-                h = i
+                print(f"Total: ${total}")
                 break
-        if food == '' or h == '':
-            break
+
     return food
 
 
