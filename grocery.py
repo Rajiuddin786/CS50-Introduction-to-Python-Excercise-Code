@@ -8,6 +8,7 @@ def main():
             i = input().strip().upper()
             g = g + [i]
     except EOFError:
+        g.sort()
         a = len(g)
         for j in g:
             if j != ' ':
