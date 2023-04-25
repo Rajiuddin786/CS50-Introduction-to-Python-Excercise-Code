@@ -18,7 +18,7 @@ def main():
                     pos += 1
 
             if c != 0:
-                print(f"{c} {j}", end=' ')
+                print(f"{c} {j}")
             c = 0
             pos = 0
             for q in range(a):
