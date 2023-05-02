@@ -43,7 +43,7 @@ def send(ate):
         if z == 0 or s == 0:
             main()
         mon = month.index(a_1[0])
-        if int(a_1[1]) > 30:
+        if int(a_1[1]) > 22:
             main()
         if mon + 1 < 10:
             o = '0' + str(mon + 1)
@@ -56,8 +56,25 @@ def send(ate):
         print(f"{a_1[2]}-{o}-{q}", end='')
 
     except ValueError:
+
+        month = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"]
         a_2 = ate.split('/')
-        if int(a_2[0]) > 31 or int(a_2[1]) > 13:
+        for w in month:
+            if w == a_2[0]:
+                main()
+        if int(a_2[0]) > 23 or int(a_2[1]) > 13:
             main()
         if int(a_2[0]) < 10:
             t = '0' + a_2[0]
