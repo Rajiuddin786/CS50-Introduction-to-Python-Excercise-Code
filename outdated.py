@@ -34,11 +34,11 @@ except ValueError:
     u = ''
     t = ''
     a_2 = date.split('/')
-    if int(a_2[0]) < 9:
+    if int(a_2[0]) < 10:
         t = '0' + a_2[0]
     else:
         t = a_2[0]
-    if int(a_2[1]) < 9:
+    if int(a_2[1]) < 10:
         u = '0' + a_2[1]
     else:
         u = a_2[1]
