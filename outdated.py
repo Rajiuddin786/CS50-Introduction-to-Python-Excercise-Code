@@ -74,7 +74,7 @@ def send(ate):
         for w in month:
             if w == a_2[0]:
                 main()
-        if int(a_2[0]) > 23 or int(a_2[1]) > 13:
+        if int(a_2[0]) > 13 or int(a_2[1]) > 31:
             main()
         if int(a_2[0]) < 10:
             t = '0' + a_2[0]
