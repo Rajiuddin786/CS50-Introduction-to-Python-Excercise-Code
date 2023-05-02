@@ -5,6 +5,7 @@ def main():
 
 def send(ate):
     fix = ''
+    d = ''
     try:
         month = [
             "January",
@@ -24,9 +25,16 @@ def send(ate):
         for t in ate:
             if t != ',':
                 fix += t
+            if t != '/':
+                d = d + t
+            else:
+                d = d + ' ' + '/' + ' '
+
+        d.strip()
         a_1 = fix.split(' ')
+        a_3 = d.split(' ')
         for w in month:
-            if w == a_1[0]:
+            if w == a_1[0] or a_3[1] == '/':
                 z = 1
         if z == 0:
             main()
