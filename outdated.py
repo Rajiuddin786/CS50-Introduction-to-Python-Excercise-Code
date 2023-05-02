@@ -22,21 +22,23 @@ def send(ate):
             "December"]
 
         z = 0
+        s = 0
         for t in ate:
             if t != ',':
                 fix += t
+            else:
+                s = 1
             if t != '/':
                 d = d + t
             else:
                 d = d + ' ' + '/' + ' '
-
         d.strip()
         a_1 = fix.split(' ')
         a_3 = d.split(' ')
         for w in month:
             if w == a_1[0] or a_3[1] == '/':
                 z = 1
-        if z == 0:
+        if z == 0 or s == 1:
             main()
         mon = month.index(a_1[0])
         if int(a_1[1]) > 30:
