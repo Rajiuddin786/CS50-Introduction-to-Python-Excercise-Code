@@ -42,4 +42,4 @@ except ValueError:
         u = '0' + a_2[1]
     else:
         u = a_2[1]
-    print(f"{a_2[2]}-{u}-{t}", end='')
+    print(f"{a_2[2]}-{t}-{u}", end='')
