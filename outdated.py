@@ -29,8 +29,8 @@ def send(ate):
         for w in month:
             if w == a_1[0]:
                 z = 1
-            if z == 0:
-                main()
+        if z == 0:
+            main()
         if int(a_1[1]) > 30:
             main()
         if mon + 1 < 10:
