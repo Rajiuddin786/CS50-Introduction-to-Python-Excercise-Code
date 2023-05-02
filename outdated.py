@@ -16,7 +16,7 @@ try:
 
     a_1 = date.split(' ')
     mon = month.index(a_1[0])
-    print(f"{a_1[2]}-0{a_1[0]}-0{mon+1}",end='')
+    print(f"{a_1[2]}-0{a_1[1]}-0{mon+1}",end='')
 
 
 except ValueError:
