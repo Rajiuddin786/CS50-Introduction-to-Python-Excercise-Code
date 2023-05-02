@@ -1,5 +1,6 @@
 date = input('Date: ').strip()
-fix = ' '
+fix = ''
+q = ''
 try:
     month = [
         "January",
@@ -17,13 +18,28 @@ try:
 
     for t in date:
         if t != ',':
-            fix+=t
-    fix.strip()
+            fix += t
     a_1 = fix.split(' ')
     mon = month.index(a_1[0])
-    print(f"{a_1[2]}-0{mon + 1}-0{a_1[1]}",end='')
+    p = mon + 1
+    o = str(p)
+    if mon < 9:
+        o = '0' + o
+    if int(a_1[1]) < 9:
+        q = '0' + a_1[1]
+    print(f"{a_1[2]}-{o}-{q}", end='')
 
 
 except ValueError:
-    a_2 = fix.split('/')
-    print(f"{a_2[2]}-0{a_2[0]}-0{a_2[1]}",end='')
+    u = ''
+    t = ''
+    a_2 = date.split('/')
+    if int(a_2[0]) < 9:
+        t = '0' + a_2[0]
+    else:
+        t = a_2[0]
+    if int(a_2[1]) < 9:
+        u = '0' + a_2[1]
+    else:
+        u = a_2[1]
+    print(f"{a_2[2]}-{u}-{t}", end='')
