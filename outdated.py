@@ -38,7 +38,9 @@ def send(ate):
         for w in month:
             if w == a_1[0] or a_3[1] == '/':
                 z = 1
-        if z == 0 or s == 1:
+        if a_3[1] == '/':
+            s = 1
+        if z == 0 or s == 0:
             main()
         mon = month.index(a_1[0])
         if int(a_1[1]) > 30:
