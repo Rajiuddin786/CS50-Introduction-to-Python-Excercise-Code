@@ -21,4 +21,4 @@ try:
 
 except ValueError:
     a_2 = date.split('/')
-    print(f"{a_2[2]}-{a_2[1]}-{a_2[0]}")
+    print(f"{a_2[2]}-{a_2[1]}-{a_2[0]}",end='')
