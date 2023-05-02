@@ -21,12 +21,14 @@ try:
             fix += t
     a_1 = fix.split(' ')
     mon = month.index(a_1[0])
-    p = mon + 1
-    o = str(p)
-    if mon < 9:
-        o = '0' + o
-    if int(a_1[1]) < 9:
+    if mon+1 < 10:
+        o = '0' + str(mon+1)
+    else:
+        o = str(mon+1)
+    if int(a_1[1]) < 10:
         q = '0' + a_1[1]
+    else:
+        q = a_1[1]
     print(f"{a_1[2]}-{o}-{q}", end='')
 
 
