@@ -1,4 +1,4 @@
-date = input().strip()
+date = input('Date: ').strip()
 try:
     month = [
         "January",
