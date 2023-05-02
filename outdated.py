@@ -20,11 +20,17 @@ def send(ate):
             "November",
             "December"]
 
+        z = 0
         for t in ate:
             if t != ',':
                 fix += t
         a_1 = fix.split(' ')
         mon = month.index(a_1[0])
+        for w in month:
+            if w == a_1[0]:
+                z = 1
+            if z == 0:
+                main()
         if int(a_1[1]) > 30:
             main()
         if mon + 1 < 10:
