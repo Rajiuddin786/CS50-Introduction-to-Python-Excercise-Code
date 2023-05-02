@@ -18,7 +18,7 @@ try:
     for t in date:
         if t != ',':
             fix+=t
-
+    fix.strip()
     a_1 = fix.split(' ')
     mon = month.index(a_1[0])
     print(f"{a_1[2]}-0{mon + 1}-0{a_1[1]}",end='')
