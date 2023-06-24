@@ -17,7 +17,7 @@ except EOFError:
                     print(store[i],end=', ')
             else:
                 if i == 0:
-                    print('Adieu, adieu, to',store[0],end='')
+                    print('Adieu, adieu, to',store[0],end=' ')
                 elif i == 1:
                     print('and',store[1])
         else:
