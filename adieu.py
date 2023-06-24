@@ -1,7 +1,7 @@
 store = []
 try:
     while True:
-        name = input('Name: ')
+        name = input()
         store = store + [name]
 
 except EOFError:
