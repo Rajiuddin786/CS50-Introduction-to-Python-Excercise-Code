@@ -1,4 +1,5 @@
 import random
+import sys
 
 def take_level():
     try:
@@ -52,7 +53,7 @@ def main():
 
 
     if result == 1:
-        print('Just Right!')
+        sys.exit('Just Right!')
 
 
 main()
