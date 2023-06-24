@@ -19,6 +19,6 @@ except EOFError:
                 if i == 0:
                     print('Adieu, adieu, to',store[0])
                 elif i == (c-1):
-                    print('and',store[c-1])
+                    print('and',store[1])
         else:
             print('Adieu, adieu, to',store[0])
