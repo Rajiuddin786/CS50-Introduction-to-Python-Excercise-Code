@@ -1,7 +1,7 @@
 store = []
 try:
     while True:
-        name = input('Name: ')
+        name = input()
         store = store + [name]
 
 except EOFError:
@@ -18,7 +18,7 @@ except EOFError:
             else:
                 if i == 0:
                     print('Adieu, adieu, to',store[0])
-                elif i == (c-1):
+                elif i == 1:
                     print('and',store[1])
         else:
             print('Adieu, adieu, to',store[0])
