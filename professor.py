@@ -4,8 +4,7 @@ def take_level():
     while True:
         try:
             level = int(input('Level: '))
-            if level == 1 or level == 2 or level == 3:
-                break
+            return level
         except ValueError:
             take_level()
 
@@ -40,7 +39,13 @@ def calculator():
 
 def main():
     score = 0
-    take_level()
+    try:
+       level = take_level()
+       if level != 1 or level != 2 or level != 3:
+        raise ValueError
+    except ValueError:
+        exit()
+
     for i in range(9):
         score = score + calculator()
     print('Score: ',score)
