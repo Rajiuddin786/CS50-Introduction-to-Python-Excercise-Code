@@ -2,9 +2,12 @@ import random
 
 def take_level():
     while True:
-        level = int(input('Level: '))
-        if level == 1 or level == 2 or level == 3:
-            break
+        try:
+            level = int(input('Level: '))
+            if level == 1 or level == 2 or level == 3:
+                break
+        except ValueError:
+            take_level()
 
 
 def check_answer(a,b,an):
