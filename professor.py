@@ -1,58 +1,55 @@
 import random
 
-def take_level():
+def get_level():
     while True:
-        try:
-            level = int(input('Level: '))
-            if level == 0 or level == 4:
-                take_level()
-            return level
-        except ValueError:
-            take_level()
+        level = input("Enter the level (1, 2, or 3): ")
+        if level in ['1', '2', '3']:
+            return int(level)
 
-
-def check_answer(a,b,an):
-    try:
-        ans = int(an)
-        if (a+b) ==  ans:
-            return 1
-        else:
-            return 0
-    except ValueError:
-        return -1
-
-def calculator(level):
+def generate_integer(level):
     if level == 1:
-        x = random.randint(0, 9)
-        y = random.randint(0, 9)
+        return random.randint(0, 9)
     elif level == 2:
-        x = random.randint(10, 99)
-        y = random.randint(10, 99)
+        return random.randint(10, 99)
     elif level == 3:
-        x = random.randint(100, 999)
-        y = random.randint(100, 999)
+        return random.randint(100, 999)
     else:
-        raise ValueError("Invalid Input")
-        exit()
-    count = 0
-    while True:
-        count+=1
-        answer = input(f'{x} + {y} = ')
-        check = check_answer(x,y,answer)
-        if check == 1:
-            return 1
-        elif check == -1 or check == 0:
-            print('EEE')
-        if count == 3:
-            print(f'{x} + {y} = ',(x+y))
-            return 0
+        raise ValueError("Invalid level. Level must be 1, 2, or 3.")
 
+def solve_problem(problem):
+    x, y = problem
+    correct_answer = x + y
+    tries = 0
+
+    while tries < 3:
+        answer = input(f"What is {x} + {y}? ")
+        try:
+            answer = int(answer)
+            if answer == correct_answer:
+                return True
+            else:
+                print("EEE")
+                tries += 1
+        except ValueError:
+            print("EEE")
+            tries += 1
+
+    print(f"The correct answer is {correct_answer}.")
+    return False
 
 def main():
+    level = get_level()
     score = 0
-    level = take_level()
-    for i in range(9):
-        score = score + calculator(level)
-    print('Score: ',score)
 
-main()
+    for _ in range(10):
+        x = generate_integer(level)
+        y = generate_integer(level)
+        problem = (x, y)
+
+        if solve_problem(problem):
+            score += 1
+
+    print(f"Your score: {score}/10")
+
+if __name__ == "__main__":
+    main()
