@@ -4,8 +4,6 @@ def take_level():
     while True:
         try:
             level = int(input('Level: '))
-            if level == 0 or level == 4:
-                take_level()
             return level
         except ValueError:
             take_level()
@@ -21,16 +19,10 @@ def check_answer(a,b,an):
     except ValueError:
         return -1
 
-def calculator(level):
-    if level == 1:
-        x = random.randint(0, 9)
-        y = random.randint(0, 9)
-    elif level == 2:
-        x = random.randint(10, 99)
-        y = random.randint(10, 99)
-    else:
-        x = random.randint(100, 999)
-        y = random.randint(100, 999)
+def calculator():
+
+    x = random.randint(1, 10)
+    y = random.randint(1, 10)
     count = 0
     while True:
         count+=1
@@ -55,7 +47,7 @@ def main():
         exit()
 
     for i in range(9):
-        score = score + calculator(level)
+        score = score + calculator()
     print('Score: ',score)
 
 main()
