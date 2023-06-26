@@ -28,9 +28,11 @@ def calculator(level):
     elif level == 2:
         x = random.randint(10, 99)
         y = random.randint(10, 99)
-    else:
+    elif level == 3:
         x = random.randint(100, 999)
         y = random.randint(100, 999)
+    else:
+        raise ValueError("Invalid Input")
     count = 0
     while True:
         count+=1
@@ -47,13 +49,7 @@ def calculator(level):
 
 def main():
     score = 0
-    try:
-       level = take_level()
-       if level != 1 and level != 2 and level != 3:
-        raise ValueError
-    except ValueError:
-        exit()
-
+    level = take_level()
     for i in range(9):
         score = score + calculator(level)
     print('Score: ',score)
