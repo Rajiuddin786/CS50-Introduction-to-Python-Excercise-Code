@@ -2,7 +2,7 @@ import random
 
 def get_level():
     while True:
-        level = input("Enter the level (1, 2, or 3): ")
+        level = input("Level: ")
         if level in ['1', '2', '3']:
             return int(level)
 
@@ -22,7 +22,7 @@ def solve_problem(problem):
     tries = 0
 
     while tries < 3:
-        answer = input(f"What is {x} + {y}? ")
+        answer = input(f"{x} + {y} = ")
         try:
             answer = int(answer)
             if answer == correct_answer:
@@ -34,7 +34,7 @@ def solve_problem(problem):
             print("EEE")
             tries += 1
 
-    print(f"The correct answer is {correct_answer}.")
+    print(f"{x} + {y} = {correct-answer}")
     return False
 
 def main():
@@ -49,7 +49,7 @@ def main():
         if solve_problem(problem):
             score += 1
 
-    print(f"Your score: {score}/10")
+    print(f"Score: {score}")
 
 if __name__ == "__main__":
     main()
