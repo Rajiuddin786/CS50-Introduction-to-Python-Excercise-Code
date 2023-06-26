@@ -34,7 +34,7 @@ def solve_problem(problem):
             print("EEE")
             tries += 1
 
-    print(f"{x} + {y} = {correct-answer}")
+    print(f"{x} + {y} = {correct_answer}")
     return False
 
 def main():
