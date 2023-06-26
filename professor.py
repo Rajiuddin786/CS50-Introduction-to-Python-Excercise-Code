@@ -1,57 +1,55 @@
 import random
 
-def take_level():
+def get_level():
     while True:
-        try:
-            level = int(input('Level: '))
-            if level == 0 or level == 4:
-                take_level()
+        level = input('Level: ')
+        if level in ['1','2','3']:
             return level
-        except ValueError:
-            take_level()
 
-
-def check_answer(a,b,an):
-    try:
-        ans = int(an)
-        if (a+b) ==  ans:
-            return 1
-        else:
-            return 0
-    except ValueError:
-        return -1
-
-def generate_integer(level):
+def generate_level(level):
     if level == 1:
-        x = random.randint(0, 9)
-        y = random.randint(0, 9)
+        return random.randint(0, 9)
     elif level == 2:
-        x = random.randint(10, 99)
-        y = random.randint(10, 99)
+        return random.randint(10, 99)
     elif level == 3:
-        x = random.randint(100, 999)
-        y = random.randint(100, 999)
+        return random.randint(100, 999)
     else:
         raise ValueError('Invalid Input')
-    count = 0
+
+def take_answer(a,b,c):
     while True:
-        count+=1
-        answer = input(f'{x} + {y} = ')
-        check = check_answer(x,y,answer)
-        if check == 1:
-            return 1
-        elif check == -1 or check == 0:
+        try:
+            ans = int(input(f'{a} + {b} = '))
+            if (a+b) == ans:
+                return 1
+            else:
+                c+=1
+                print('EEE')
+                if c == 3:
+                    return 0
+
+
+        except ValueError:
+            c+=1
             print('EEE')
-        if count == 3:
-            print(f'{x} + {y} = ',(x+y))
-            return 0
+            if c == 3:
+                return 0
 
 
 def main():
     score = 0
-    level = take_level()
-    for i in range(9):
-        score = score + generate_integer(level)
-    print('Score: ',score)
+    level = int(get_level())
 
-main()
+    for i in range(10):
+        x = generate_level(level)
+        y = generate_level(level)
+        return_value = take_answer(x,y,0)
+        if return_value == 0:
+            print(f'{x} + {y} = {x+y}')
+        else:
+            score = score + return_value
+
+    print(f'Score: {score}')
+
+if __name__ == '__main__':
+    main()
