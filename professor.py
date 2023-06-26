@@ -8,7 +8,7 @@ def take_level():
                 raise ValueError
             return level
         except ValueError:
-            take_level()
+            print("Invalid input. Please enter a valid level (1, 2, or 3).")
 
 def check_answer(a, b, ans):
     try:
