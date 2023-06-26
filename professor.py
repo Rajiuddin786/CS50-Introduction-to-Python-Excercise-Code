@@ -33,6 +33,7 @@ def calculator(level):
         y = random.randint(100, 999)
     else:
         raise ValueError("Invalid Input")
+        exit()
     count = 0
     while True:
         count+=1
