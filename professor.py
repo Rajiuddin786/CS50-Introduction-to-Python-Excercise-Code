@@ -49,7 +49,7 @@ def main():
     score = 0
     try:
        level = take_level()
-       if level > 0:
+       if level != 1 and level != 2 and level != 3:
         raise ValueError
     except ValueError:
         exit()
