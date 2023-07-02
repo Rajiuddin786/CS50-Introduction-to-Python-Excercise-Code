@@ -1,7 +1,7 @@
 def main():
     name = input('Input: ')
-    s = shorten(name)
-    print('Output:',s)
+    output = shorten(name)
+    print('Output:',output)
 
 def shorten(name):
     s = ''
