@@ -1,4 +1,5 @@
 import twttr
 
 name = input("Name: ")
-print("Test Result:",twttr.shorten(name))
+s = twttr.shorten(name)
+print("Test Result:",s)
