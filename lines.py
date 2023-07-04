@@ -12,6 +12,6 @@ else:
     else:
         with open(sys.argv[1],'r') as file:
             for lines in file:
-                if not lines.startswith('#') and not lines.startswith('\n'):
+                if not lines.startswith('#') and not lines.startswith('\n') and not :
                     count+=1
 print(count)
