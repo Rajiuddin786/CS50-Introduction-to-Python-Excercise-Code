@@ -2,6 +2,9 @@ import sys
 from csv import reader
 from csv import DictWriter
 
+if(sys.argv[1]) != "before.csv" and (sys.argv[2]) != "after.csv" :
+    sys.exit("invalid csv file")
+
 first_name = []
 last_name = []
 house_of_them = []
