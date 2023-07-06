@@ -3,7 +3,7 @@ from csv import reader
 from csv import DictWriter
 
 if(sys.argv[1]) != "before.csv":
-    sys.exit("invalid csv file")
+    sys.exit("Could not read {sys.argv[1]}")
 elif(sys.argv[2] != "after.csv"):
     sys.exit("Invalid csv file")
 
