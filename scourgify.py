@@ -2,8 +2,10 @@ import sys
 from csv import reader
 from csv import DictWriter
 
-if(sys.argv[1]) != "before.csv" and (sys.argv[2]) != "after.csv" :
+if(sys.argv[1]) != "before.csv":
     sys.exit("invalid csv file")
+elif(sys.argv[2] != "after.csv"):
+    sys.exit("Invalid csv file)
 
 first_name = []
 last_name = []
