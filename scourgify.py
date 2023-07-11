@@ -13,7 +13,7 @@ try:
         for row in read:
             comma = row[0]
             for i in comma:
-                if i != '"':
+                if i == '"':
                     print(i)
 
             student.append({"frist":row[0],"last":row[1],"house":row[2]})
