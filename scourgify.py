@@ -3,14 +3,20 @@ import sys
 
 if len(sys.argv) != 3:
     sys.exit("Invalid Input")
-
+s = ''
+s1 = ''
 try:
     student = []
     with open(sys.argv[1]) as file:
         read = csv.reader(file)
         header = next(read)
         for row in read:
-            student.append({"frist":row[0].replace('"'),"last":row[1].replace('"'),"house":row[2]})
+            comma = row[0]
+            for i in comma:
+                if i != '"':
+                    s = s+i
+            print(s)
+            student.append({"frist":row[0],"last":row[1],"house":row[2]})
 except FileNotFoundError:
     sys.exit(f"Could not find {sys.argv[1]}")
 except IOError:
