@@ -19,4 +19,4 @@ with open(sys.argv[2],"a",newline='') as file:
     write = csv.DictWriter(file,fieldnames=["frist","last","house"])
     write.writeheader()
     write.writerows(student)
-exit(code=0)
+sys.exit(0)
