@@ -11,7 +11,6 @@ try:
         header = next(read)
         for row in read:
             student.append({"frist":row[0].strip('"'),"last":row[1].strip('"'),"house":row[2]})
-    print(student)
 except FileNotFoundError:
     sys.exit(f"Could not find {sys.argv[1]}")
 
