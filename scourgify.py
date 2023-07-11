@@ -11,11 +11,6 @@ try:
         read = csv.reader(file)
         header = next(read)
         for row in read:
-            comma = row[0]
-            for i in comma:
-                if i == '"':
-                    print(i)
-
             student.append({"frist":row[0],"last":row[1],"house":row[2]})
 except FileNotFoundError:
     sys.exit(f"Could not find {sys.argv[1]}")
