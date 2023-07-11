@@ -10,10 +10,8 @@ try:
         read = csv.reader(file)
         header = next(read)
         for row in read:
-            row[0].strip('"')
-            print(row[0])
-            student.append({"frist":row[0],"last":row[0],"house":row[1]})
-
+            student.append({"frist":row[0].lstrip('"'),"last":row[1].rstrip('"'),"house":row[2]})
+    print(student)
 except FileNotFoundError:
     sys.exit(f"Could not find {sys.argv[1]}")
 
