@@ -13,6 +13,8 @@ try:
             student.append({"frist":row[0].strip('"'),"last":row[1].strip('"'),"house":row[2]})
 except FileNotFoundError:
     sys.exit(f"Could not find {sys.argv[1]}")
+except IOError:
+    sys.exit("Error: An I/O error occurred while reading or writing the files.")
 
 with open(sys.argv[2],"a",newline='') as file:
     write = csv.DictWriter(file,fieldnames=["frist","last","house"])
