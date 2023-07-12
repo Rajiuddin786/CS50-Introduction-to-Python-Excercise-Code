@@ -24,8 +24,8 @@ try:
 
     with Image.open("shirt.png") as pic:
         photo = ImageOps.fit(pic,size=(size[0],size[1]))
-        paste(photo,photo)
-        shirt.save(output_image)
+        photo.paste(shirt,shirt)
+        photo.save(output_image)
 
 except FileNotFoundError:
     sys.exit(f"File does not exit")
