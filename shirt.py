@@ -26,6 +26,6 @@ try:
         photo = ImageOps.fit(pic,size=(size[0],size[1]))
         photo.paste(shirt,shirt)
         photo.save(output_image)
-
+    sys.exit(0)
 except FileNotFoundError:
     sys.exit(f"File does not exit")
