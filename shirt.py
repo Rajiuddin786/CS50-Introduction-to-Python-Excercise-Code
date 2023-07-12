@@ -23,8 +23,8 @@ try:
     size = shirt.size
 
     with Image.open("shirt.png") as pic:
-        photo = pic.resize(size)
-        shirt.paste(photo,photo)
+        photo = ImageOps.fit(pic,size=(size[0],size[1]))
+        paste(photo,photo)
         shirt.save(output_image)
 
 except FileNotFoundError:
