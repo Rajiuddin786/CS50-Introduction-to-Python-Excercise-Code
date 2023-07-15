@@ -1,5 +1,5 @@
+from csv import reader,DictReader,writer,DictWriter
 import sys
-import csv
 
 if len(sys.argv) > 3:
     sys.exit("Too Many Argument")
@@ -14,12 +14,19 @@ else:
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 def main():
-    with open(output_file,"w",newline="") as file:
-        header = ["frist","last","house"]
-        write = csv.writer(file,fieldnames=header)
-        with open(input_file) as fil:
-            read = csv.reader(file)
-            head = next(read)
-            for row in read:
-                frist,last,house = row.split(",")
-                
+    try:
+        with open(output_file,"w",newline="") as file:
+            header = ["frist","last","house"]
+            write = DictWriter(file,fieldnames=header)
+            with open(input_file) as fil:
+                read = reader(fil)
+                head = next(read)
+                write.writeheader()
+                for row in read:
+                    frist,last = row[0].split(",")
+                    write.writerow({"frist":frist,"last":last,"house":row[1]})
+    except FileNotFoundError:
+        sys.exit(f"Could not file{input_file}")
+
+if __name__ == "__main__":
+    main()
