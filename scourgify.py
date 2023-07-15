@@ -11,5 +11,15 @@ else:
     if b != "csv" and y!= "csv":
         sys.exit("Not a CSV file")
 
+input_file = sys.argv[1]
+output_file = sys.argv[2]
 def main():
-    
+    with open(output_file,"w",newline="") as file:
+        header = ["frist","last","house"]
+        write = csv.writer(file,fieldnames=header)
+        with open(input_file) as fil:
+            read = csv.reader(file)
+            head = next(read)
+            for row in read:
+                frist,last,house = row.split(",")
+                
