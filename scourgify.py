@@ -26,7 +26,7 @@ def clean(input_file,output_file):
                 read = DictReader(fil)
                 write.writeheader()
                 for row in read:
-                    frist,last = row["name"].split(",")
+                    last,frist = row["name"].split(",")
                     write.writerow({"frist":frist.strip(),"last":last.strip(),"house":row["house"].strip()})
     except FileNotFoundError:
         sys.exit(f"Could not file{input_file}")
