@@ -24,7 +24,7 @@ def main():
                 write.writeheader()
                 for row in read:
                     frist,last = row[0].split(",")
-                    write.writerow({"frist":frist,"last":last,"house":row[1]})
+                    write.writerow({"frist":frist.strip(),"last":last.strip(),"house":row[1].strip()})
     except FileNotFoundError:
         sys.exit(f"Could not file{input_file}")
 
