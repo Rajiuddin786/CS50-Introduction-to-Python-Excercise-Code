@@ -1,34 +1,35 @@
-import csv
+from csv import reader,DictReader,writer,DictWriter
 import sys
 
-
 def main():
-    if len(sys.argv) < 3:
-        sys.exit("Too few command-line arguments")
-    elif len(sys.argv) > 3:
-        sys.exit("Too many command-line arguments")
+    input_ = sys.argv[1]
+    output_ = sys.argv[2]
+    if len(sys.argv) > 3:
+        sys.exit("Too Many Argument")
+    elif len(sys.argv) < 3:
+        sys.exit("Too Few Argument")
     else:
-        if sys.argv[1][-4:] != ".csv":
+        _,b = sys.argv[1].split('.')
+        _,y = sys.argv[2].split('.')
+        if b != "csv" and y!= "csv":
             sys.exit("Not a CSV file")
         else:
-            clean(sys.argv[1], sys.argv[2])
+            clean(input_,output_)
 
 
-def clean(input, output):
+def clean(input_file,output_file):
     try:
-        with open(input) as input:
-            reader = csv.DictReader(input)
-            with open(output, "w") as output:
-                header = ["first", "last", "house"]
-                writer = csv.DictWriter(output, fieldnames = header)
-                writer.writeheader()
-                for student in reader:
-                    last, first = student["name"].split(", ")
-                    house = student["house"]
-                    writer.writerow({"first": first, "last": last, "house": house})
+        with open(output_file,"w",newline="") as file:
+            header = ["frist","last","house"]
+            write = DictWriter(file,fieldnames=header)
+            with open(input_file) as fil:
+                read = DictReader(fil)
+                write.writeheader()
+                for row in read:
+                    frist,last = row["name"].split(",")
+                    write.writerow({"frist":frist.strip(),"last":last.strip(),"house":row["house"].strip()})
     except FileNotFoundError:
-        sys.exit(f"Could not read {input}")
-
+        sys.exit(f"Could not file{input_file}")
 
 if __name__ == "__main__":
     main()
