@@ -20,14 +20,14 @@ def main():
 def clean(input_file,output_file):
     try:
         with open(output_file,"w",newline="") as file:
-            header = ["frist","last","house"]
+            header = ["first","last","house"]
             write = DictWriter(file,fieldnames=header)
             with open(input_file) as fil:
                 read = DictReader(fil)
                 write.writeheader()
                 for row in read:
                     last,frist = row["name"].split(",")
-                    write.writerow({"frist":frist.strip(),"last":last.strip(),"house":row["house"].strip()})
+                    write.writerow({"first":frist.strip(),"last":last.strip(),"house":row["house"].strip()})
     except FileNotFoundError:
         sys.exit(f"Could not file{input_file}")
 
