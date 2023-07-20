@@ -37,7 +37,11 @@ def convert(s):
             return_value = str(convert_hour1)+":"+str(minute_first)+" to "+str(convert_hour2)+":"+str(minute_second)
             return(return_value)
         else:
-            raise ValueError('Enter Valid Time')
+            return(' ')
+    else:
+        raise ValueError('Enter Valid Time')
+
+
 
 
 
