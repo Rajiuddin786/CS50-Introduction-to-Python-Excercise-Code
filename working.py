@@ -10,7 +10,10 @@ def convert(s):
         if check:
             hour_first = int(check.group(1))
             if check.group(2):
-                minute_first = int(check.group(2))
+                if not(check.group(2) == '00')
+                     minute_second = int(check.group(2))
+                else:
+                    minute_second = '00'
             else:
                 minute_first = '00'
             meridian1 = check.group(3)
