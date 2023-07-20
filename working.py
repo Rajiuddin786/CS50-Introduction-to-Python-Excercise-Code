@@ -33,7 +33,7 @@ def convert(s):
                 convert_hour2 = hour_second
         else:
             raise ValueError('Enter correct time')
-        return_value = str(convert_hour1)+":"+str(minute_first)+" "+(meridian1)+" to "+str(convert_hour2)+":"+str(minute_second)+" "+(meridian2)
+        return_value = str(convert_hour1)+":"+str(minute_first)+" to "+str(convert_hour2)+":"+str(minute_second)
         return(return_value)
 
 
