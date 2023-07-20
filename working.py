@@ -23,9 +23,9 @@ def convert(s):
             if 0 <= hour_first <= 12 and 0 <= int(minute_first) <= 60:
                 if not(meridian1 == 'AM' or meridian1 == 'am'):
                     convert_hour1 = hour_first + 12
-                    convert_hour_1 = str()
+                    convert_hour_1 = str(convert_hour1)
                 else:
-                    convert_hour_1 = str(hour_first)
+                    convert_hour_1 = '0'+str(hour_first)
             else:
                 raise ValueError("Enter Correct Time")
             if 0 <= hour_second <= 12 and 0 <= int(minute_second) <= 60:
@@ -37,7 +37,7 @@ def convert(s):
 
             else:
                 raise ValueError('Enter correct time')
-            return_value = str(convert_hour1)+":"+str(minute_first)+" to "+convert_hour_2+":"+str(minute_second)
+            return_value = convert_hour_1+":"+str(minute_first)+" to "+convert_hour_2+":"+str(minute_second)
             return(return_value)
         else:
             return('')
