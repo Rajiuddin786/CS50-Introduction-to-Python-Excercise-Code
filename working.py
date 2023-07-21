@@ -26,16 +26,28 @@ def convert(s):
         meridian2 = check.group(6)
         if 0 <= hour_first <= 12 and 0 <= int(minute_first) <= 60:
             if not(meridian1 == 'AM' or meridian1 == 'am'):
-                convert_hour1 = hour_first + 12
+                if convert_hour1 != 12:
+                    convert_hour1 = hour_first + 12
+                else:
+                    convert_hour1 = 12
             else:
-                convert_hour1 = hour_first
+                if convert_hour1 != 12:
+                    convert_hour1 = hour_first
+                else:
+                    convert_hour1 = 0
         else:
             raise ValueError("Enter Correct Time")
         if 0 <= hour_second <= 12 and 0 <= int(minute_second) <= 60:
             if not(meridian2 == 'AM' or meridian2 == 'am'):
-                convert_hour2 = hour_second + 12
+                if hour_second != 12:
+                    convert_hour2 = hour_second + 12
+                else:
+                    convert_hour2 = 12
             else:
-                convert_hour2 = hour_second
+                if hour_second != 12:
+                    convert_hour2 = hour_second
+                else:
+                    convert_hour2 = 0
         else:
             raise ValueError('Enter correct time')
 
