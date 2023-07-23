@@ -1,7 +1,9 @@
 import pytest
 from um import count
 
-def test_count():
-    assert("Hello, World um") == 1
-    assert("um,What's um up") == 2
-    assert("um?um....um") == 3
+
+def test_input():
+    assert count("Um, thanks for the album.") == 1
+    assert count("um") == 1
+    assert count("Um, thanks, um...") == 2
+    assert count("Um?") == 1
