@@ -1,15 +1,13 @@
-import re
-import sys
+from validator_collection import validators,checkers
 
 def main():
-    print(check(input("Email: ")))
+    print(validate(input("What's your email: ")))
 
-def check(s):
-    if email := re.search('^[^@]\w+@[^@]\w+\.[a-z]+$',s,re.IGNORECASE):
-        return ("Valid")
+def validate(s):
+    if checkers.is_email(s):
+        return f"Valid"
     else:
-        return ("Invalid")
-
+        return f"Invalid"
 
 if __name__ == "__main__":
     main()
