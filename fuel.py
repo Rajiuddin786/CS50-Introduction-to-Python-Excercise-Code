@@ -19,7 +19,7 @@ def gauge(x,y):
         p=(x/y)*100
         return p;
 
-    except (ZeroDivisionError,TypeErro):
+    except (ZeroDivisionError,TypeError):
         convert()
 
 if __name__=="__main__":
