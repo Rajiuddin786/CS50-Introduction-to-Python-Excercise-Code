@@ -4,8 +4,10 @@ def main():
     p=int(gauge(x,y))
     if p <= 1:
         print('E')
-    elif 99 <= p:
+    elif 99 <= p <=100:
         print('F')
+    elif p > 100:
+        main()
     else:
         print(f"{p}%")
 
