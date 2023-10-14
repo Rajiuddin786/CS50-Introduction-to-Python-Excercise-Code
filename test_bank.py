@@ -1,10 +1,10 @@
-import pytest
-from bank import check
+from bank import value
 
-def test_check():
-    assert check("Hello World")=="$0"
-    assert check("Hi,Raj")=="$20"
-    assert check("Raj is Good")=="$100"
-    assert check("HI WORLD") == "$20"
-    assert check("wassup world") == "$100"
-    assert check("WASSUP WORLD") == "$100"
+
+def test_greeting():
+    assert value("hello world") == 0
+    assert value("HELLO WORLD") == 0
+    assert value("hi world") == 20
+    assert value("HI WORLD") == 20
+    assert value("wassup world") == 100
+    assert value("WASSUP WORLD") == 100
