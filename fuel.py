@@ -1,13 +1,13 @@
 def main():
     f = input('Fraction: ')
     x,y = convert(f)
-    p=gauge(x,y)
+    p=int(gauge(x,y))
     if p <= 1:
         print('E')
-    elif 99 <= p <=100:
+    elif 99 <= p:
         print('F')
     else:
-        print(f"{int(p)}%")
+        print(f"{p}%")
 
 def convert(f):
     try:
