@@ -17,8 +17,10 @@ def convert():
 def gauge(x,y):
     try:
         p=(x/y)*100
-        
-    expect
+        return p;
+
+    except ZeroDivisionError:
+        convert()
 
 if __name__=="__main__":
     main()
