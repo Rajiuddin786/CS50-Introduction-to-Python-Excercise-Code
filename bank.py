@@ -38,11 +38,11 @@ def check(hello):
         if i > 5:
             break
     if r == 5:
-        return 1
+        return -1
     if r != 5 and h==1:
         return 0
     else:
-        return -1
+        return 1
 
 if __name__ == "__main__":
     main()
