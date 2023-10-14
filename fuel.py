@@ -4,14 +4,19 @@ def main():
     p=gauge(x,y)
     if p <= 1:
         print('E')
-    if :
+    elif 99 <= p <=100:
         print('F')
+    else:
+        print(f"{int(p)}%")
 
 def convert(f):
-    x, y = f.split('/')
-    x = int(x)
-    y = int(y)
-    return x,y
+    try:
+        x, y = f.split('/')
+        x = int(x)
+        y = int(y)
+        return x,y
+    except ValueError:
+        main()
 
 
 def gauge(x,y):
@@ -20,7 +25,7 @@ def gauge(x,y):
         return p;
 
     except (ZeroDivisionError,TypeError):
-        convert()
+        main()
 
 if __name__=="__main__":
     main()
