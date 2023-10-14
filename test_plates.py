@@ -6,3 +6,5 @@ def test_plates():
     assert is_valid("QWER123")==False
     assert is_valid("qw1er2")==False
     assert is_valid("QWE0")==False
+    assert is_valid("9qwert")==False
+    assert is_valid("qwe@34")==False
