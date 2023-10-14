@@ -1,17 +1,17 @@
 def main():
     try:
-        per = check()
+        per = convert()
 
     except (ZeroDivisionError, ValueError):
-        check()
+        convert()
 
 
-def check():
+def convert():
     f = input('Fraction: ')
     x, y = f.split('/')
     x = int(x)
     y = int(y)
-    p = (x / y) * 100
+    p=gauge(x,y)
     if p <= 1:
         print('E')
     elif 99 <= p <= 100:
@@ -22,5 +22,8 @@ def check():
         print(f"{p}%")
     return p
 
-
-main()
+def gauge(x,y):
+    return (x/y)*100
+    
+if __name__=="__main__":
+    main()
