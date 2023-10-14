@@ -31,11 +31,11 @@ def check(hello):
         if i > 5:
             break
     if r == 5:
-        return f"$100"
+        return f"$0"
     if r != 5 and h==1:
         return f"$20"
     else:
-        return f"$0"
+        return f"$100"
 
 if __name__ == "__main__":
     main()
