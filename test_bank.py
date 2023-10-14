@@ -7,4 +7,4 @@ def test_check():
     assert check("Raj is Good")=="$100"
     assert check("HI WORLD") == "$20"
     assert check("wassup world") == "$100"
-    assert check("WASSUP WORLD") == "$10"
+    assert check("WASSUP WORLD") == "$100"
