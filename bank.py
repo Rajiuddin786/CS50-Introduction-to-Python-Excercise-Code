@@ -1,13 +1,6 @@
 def main():
     hello = input("Greeting: ").strip().title()
-    j = check(hello)
-    if j == 1:
-        print('$0', end='')
-    elif j == 0:
-        print('$20', end='')
-    elif j == -1:
-        print('$100', end='')
-
+    print(f"{check(hello)}")
 
 def check(hello):
     my_list = list(hello)
@@ -38,11 +31,11 @@ def check(hello):
         if i > 5:
             break
     if r == 5:
-        return -1
+        return f"$100"
     if r != 5 and h==1:
-        return 0
+        return f"$20"
     else:
-        return 1
+        return f"$0"
 
 if __name__ == "__main__":
     main()

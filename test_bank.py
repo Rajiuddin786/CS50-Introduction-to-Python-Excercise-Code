@@ -1,6 +1,6 @@
 from bank import check
 
 def test_check():
-    assert(check("Hello"))==-1
-    assert(check("Hi"))==0
-    assert(check("Raj"))==1
+    assert(check("Hello"))=="$100"
+    assert(check("Hi"))=="$20"
+    assert(check("Raj"))=="$0"
