@@ -1,13 +1,13 @@
 def main():
-    x,y = convert()
+    f = input('Fraction: ')
+    x,y = convert(f)
     p=gauge(x,y)
     if p <= 1:
         print('E')
     else:
         print('F')
 
-def convert():
-    f = input('Fraction: ')
+def convert(f):
     x, y = f.split('/')
     x = int(x)
     y = int(y)
