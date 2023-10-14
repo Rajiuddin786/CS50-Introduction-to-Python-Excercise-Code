@@ -4,7 +4,7 @@ def main():
     p=gauge(x,y)
     if p <= 1:
         print('E')
-    else:
+    if :
         print('F')
 
 def convert(f):
