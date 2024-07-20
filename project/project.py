@@ -1,5 +1,5 @@
 """
-Project Title: Tic-Tac
+Project Title: Tic-Tac-Toe
 Name: Sk Rajiuddin
 Git-Hub UserName: @Rajiuddin786
 Edx UserName: skrajiuddin
