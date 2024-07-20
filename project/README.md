@@ -13,7 +13,13 @@ This project implements a simple Tic-Tac-Toe game using Python and Tkinter for t
 - **Date**: 20/07/2024
 
 ## Description
-This project is a basic implementation of the classic Tic-Tac-Toe game. It allows two players to play against each other by clicking on the grid to mark their moves. The game checks for a win or draw after each move and displays the result using a message box. Players can reset the game to start a new match.
+This project is a basic implementation of the simple Tic-Tac-Toe game between two player i.e, "X" and "O".
+I have  used the python inbuilt GUI "tkinter" and one of its funtionality "messagebox" for the pop-up. In
+main funtion I have make the "root" global so that other funtion can assess it. The root contains the basic
+to initiate the tkinter. I have also used ".title()" function to give title to the game. After the I called the
+"add_grid()" funtion to add button for the game. I have passed an empty 2D Matrix of 3X3 named buttons into
+add_grid(). This matrix keeps a real time track of the game. While creating button we have pass another funtion
+
 
 ## Features
 - Two-player gameplay (Player X and Player O)
